@@ -4,7 +4,7 @@ module.exports.mongoose = {
   // The Mongo connection URI
   // (see https://github.com/mikermcneil/sails-hook-orm-mongoose/blob/master/README.md#configuration for more info)
   //
-  uri: 'mongodb://120.25.171.21:27017/realtimevote',
+  uri: 'mongodb://chenyl:BwvxiBzhc3XME@dds-bp1788f76b9aaa842.mongodb.rds.aliyuncs.com:3717/vote,mongodb://chenyl:BwvxiBzhc3XME@dds-bp1788f76b9aaa841.mongodb.rds.aliyuncs.com:3717',
 
 
   // Optionally, you can provide options to pass in as the second argument to `mongoose.connect()`

@@ -1,5 +1,5 @@
 module.exports = {
-	SiteDomain: 'http://m.tiyanke.com',
+	SiteDomain: 'http://realtimevote.mypaas.com.cn',
 
   //明源云企业号
   CORPID:'wxfe3aa6c1dd22f053',

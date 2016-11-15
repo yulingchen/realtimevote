@@ -1,0 +1,1 @@
+node app.js --silent --port=8888 --prod

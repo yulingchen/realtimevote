@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <title>2016明源四云创新成果秀</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="http://res.wx.qq.com/open/libs/weui/1.0.2/weui.min.css">
+  <link rel="stylesheet" href="/realtimevote/css/realtimevote.css?v=63">
+</head>
+<body class="page-vote">
+  <div id="app">
+    <div class="vote-ad"></div>
+    <div class="vote-rule">
+      <div class="vote-rule-content">
+        <h3>点赞规则</h3>
+        <ul>
+          <li>1.每位小组成员有5次点赞机会，不可重复点赞</li>
+          <li>2.每组演示完成后启动60秒点赞</li>
+          <li>3.过号不能返回点赞</li>
+          <li>4.支持的小组获奖，有机会获得神秘礼品一份</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="vote-wrap">
+      <span class="link-icon link-left"></span>
+      <span class="link-icon link-right"></span>
+      <div class="vote-content">
+        <div class="tips">
+          <strong>参赛产品小组</strong>
+          <p>点击小桃心可为我点赞哦~</p>
+        </div>
+
+        <ul>
+          <li v-for="(team, index) in teams">
+            <div v-bind:class="[{'team-startzan': team.vote_starttime>0&&server_time<=team.vote_endtime, 'team-endzan':team.vote_starttime>0&&server_time>team.vote_endtime, 'team-zaned':team.isvoted }, 'team-wrap', 'clearfix']">
+              <div class="team-ps pull-left">
+                <img :src="team.headimg+'?x-oss-process=image/resize,h_100'" :endzan="team.vote_starttime>0&&server_time>team.vote_endtime" :zaned="team.isvoted" :_src="team.headimg" class="headimg" width="60" height="60" />
+              </div>
+              <div class="pull-overflow team-info clearfix" :teamid="team._id">
+                <div class="pull-right">
+                  <span class="zan-count" v-if="team.vote_starttime!=0">{{team.vote_total}}</span>
+                  <span class="btn-zan" :teamid="team._id"></span>
+                </div>
+                <div class="pull-overflow team-name">{{team.name}}</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="js_dialog" id="iosDialog" style="display: none;">
+      <div class="weui-mask"></div>
+      <div class="weui-dialog">
+        <div class="weui-dialog__bd"></div>
+        <div class="weui-dialog__ft">
+          <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary"></a>
+        </div>
+      </div>
+    </div>
+    <input type="hidden" id="userid" value="<%= userinfo.userid %>" />
+  </div>
+
+  <script type="text/javascript" src="/js/dependencies/sails.io.js"></script>
+  <script type="text/javascript" src="/js/lib/zepto.min.js"></script>
+  <script type="text/javascript" src="/js/lib/vue.js"></script>
+  <script type="text/javascript" src="/realtimevote/js/vote.js?v=88"></script>
+</body>
+</html>

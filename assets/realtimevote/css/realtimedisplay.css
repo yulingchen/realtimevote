@@ -1,0 +1,128 @@
+html{
+	font-size: 62.5%;
+}
+
+html,body{
+	height: 100%;
+}
+
+.page-display{
+	background-color: #230046;
+}
+
+.page-display .display-container{
+	height: 100%;
+}
+
+.page-display .banner{
+	position: relative;;
+	text-align: center;
+	height:16%;
+	padding-top:1rem;
+}
+
+.page-display .banner .count_down{
+  position: absolute;
+  top: 3rem;
+  right: 4rem;
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "黑体";
+}
+
+.page-display .banner .count_down span{
+  color: #ffc61a;
+  font-size: 4rem;
+  vertical-align: top;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  border: 1px solid #ffc800;
+  padding: 1rem;
+  display: inline-block;
+  line-height: 4rem;
+}
+
+.page-display .teamlist{
+	padding: 2rem;
+}
+
+.page-display .teamlist .team-votecount, .page-display .teamlist .team-name{
+	padding: 0 1.5rem;
+	text-align: center;
+}
+
+.page-display .team-votecount .count-bar{
+	height:0;
+	background-color: #ededed;
+	margin-bottom: 1rem;
+	border-bottom: 1rem solid #ededed;
+}
+
+.page-display .team-votecount .count-wrap{
+	position: relative;
+	text-align: center;
+  color: #fff;
+	display: none;
+	margin-bottom: 0.5rem;
+}
+
+.page-display .team-votecount .count-wrap .count{
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.8rem;
+  width: 4.8rem;
+  height: 5.5rem;
+  line-height: 5.5rem;
+  font-family: '黑体';
+  background: url(../images/count_bg.png) no-repeat;
+  display: block;
+  background-size: 4.8rem 5.5rem;
+  margin: 0 auto;
+}
+
+.page-display .team-votecount .count-wrap img{
+	vertical-align: middle;
+}
+
+.page-display .team-votecount .active .count-bar{
+	background-color: #ffc61a;
+	border-bottom: 1rem solid #ffc61a;
+}
+
+.page-display .team-votecount .voteend .count-bar{
+	background-color: #ededed;
+	border-bottom: 1rem solid #ededed;
+}
+
+.page-display .team-votecount .active .count-wrap,.page-display .team-votecount .voteend .count-wrap{
+	display: block;
+}
+
+.page-display .team-name{
+	color:#fff;
+	text-align: center;
+}
+
+.page-display .team-name .name-wrap{
+	font-size: 2rem;
+  margin: 0 auto;
+  writing-mode: tb-rl;
+  /*-webkit-writing-mode: vertical-rl;         
+	writing-mode: vertical-rl;  */
+  font-weight: bold;
+  width: 2rem;
+  letter-spacing: 0.5rem;
+  display: table;
+}
+
+.page-display .team-name .name-wrap.active{
+	color: #ffc61a;
+}
+
+.page-display .team-name .name-wrap.voteend{
+	color: #ededed;
+}

@@ -1,0 +1,218 @@
+body{
+	/*background-color: #0e0722;*/
+}
+
+.clearfix:after {content: "." ; display: block ; height: 0 ; clear: both ; visibility: hidden ; } 
+.clearfix{*zoom:1; }
+.pull-left{float: left}
+.pull-right{float: right;}
+.pull-overflow{overflow: hidden;}
+
+.page-header{
+	background-color: #2f91da;
+	color:#fff;
+	margin: 0;
+  padding: 10px;
+}
+
+.no{
+	width:16px;
+	height: 16px;
+	line-height: 16px;
+	display: inline-block;
+	-webkit-border-radius: 16px;
+	border-radius: 16px;
+	color:#fff;
+	background-color: #47a72f;
+	text-align: center;
+	font-size: 12px;
+	vertical-align: top;
+  margin: 5px 5px 0 0;
+}
+
+.align-r{text-align: right;}
+.color-green{color: #0f0;}
+
+
+/*投票界面*/
+.page-vote{
+	background-color: #070d26;
+}
+
+.page-vote .vote-ad{
+	height: 250px;
+	background: #070d26 url(../images/bg_1.png) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+
+.page-vote .vote-rule{
+	background: #070d26 url(../images/bg_2.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	padding:0 10px;
+	margin-bottom: 20px;
+}
+
+.page-vote .vote-rule-content{
+	background-color: #fff;
+	-webkit-border-radius:3px;
+	border-radius: 3px;
+	padding:5px 10px 15px;
+	background: #fff url(../images/rule_bg.png) no-repeat 50% 20px;
+	background-size: 50%;
+}
+
+.page-vote .vote-rule-content h3{
+	color: rgba(37,3,71,0.8);
+	font-size: 16px;
+	font-weight: normal;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.page-vote .vote-rule-content ul li{
+	font-size: 14px;
+	color: rgba(31,5,64,0.8);
+}
+
+.page-vote .vote-wrap{
+	position: relative;
+	background-color: #ffc536;
+	padding: 14px 10px;
+	margin: 0 10px;
+	-webkit-border-radius:3px;
+	border-radius: 3px;
+}
+
+.page-vote .vote-wrap .btn-zan{
+	background: url(../images/zan/zan_unstart.png) no-repeat;
+	display: inline-block;
+	width: 22px;
+	height: 19px;
+	background-size: 22px 19px;
+	margin:3px 5px 0 5px;
+}
+
+.page-vote .vote-wrap .link-icon{
+	position: absolute;
+	background: url(../images/link.png) no-repeat;
+  top: -30px;
+  background-size: 10px 40px;
+  width: 10px;
+  height: 40px;
+  -webkit-opacity: 0.9;
+  opacity: 0.9;
+}
+
+.page-vote .vote-wrap .link-left{
+	left:12px;
+}
+
+.page-vote .vote-wrap .link-right{
+	right:12px;
+}
+
+.page-vote .vote-wrap .vote-content{
+	background-color: #fff;
+	-webkit-border-radius:3px;
+	border-radius: 3px;
+}
+
+.page-vote .vote-wrap .vote-content .tips{
+  text-align: center;
+  font-size: 12px;
+  color: #27024a;
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
+
+.page-vote .vote-wrap .vote-content .tips strong{
+	font-size: 16px;
+  font-weight: normal;
+  background-color: #27024a;
+  color: #fff;
+  padding: 5px 0;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.page-vote .vote-wrap .vote-content .team-wrap{
+	color: #fec12a;
+	padding: 5px;
+}
+
+.page-vote .vote-wrap .vote-content .team-info{
+	border-bottom: 1px solid #ffd773;
+	padding-top: 12px;
+	padding-bottom: 10px;
+}
+
+.page-vote .vote-wrap .vote-content .team-info .zan-count{
+	vertical-align: top;
+}
+
+.page-vote .vote-wrap .vote-content .team-ps{
+	margin-right: 10px;
+	line-height: 0;
+}
+
+.page-vote .vote-wrap .vote-content .team-ps img{
+	-webkit-border-radius:60px;
+	border-radius:60px;
+	border: 3px solid #fcf0b6;
+}
+
+.page-vote .vote-wrap .vote-content .team-name{
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.page-vote .vote-wrap .vote-content .team-startzan{
+	color:#b96eff;
+}
+
+.page-vote .vote-wrap .vote-content .team-startzan .team-info{
+	border-bottom: 1px solid #b96eff;
+}
+
+.page-vote .vote-wrap .vote-content .team-startzan .team-ps img{
+	border: 3px solid #b96eff;
+}
+
+.page-vote .vote-wrap .vote-content .team-startzan .btn-zan{
+	background: url(../images/zan/zan_start_unvoted.png) no-repeat;
+	background-size: 22px 19px;
+}
+
+.page-vote .vote-wrap .vote-content .team-startzan.team-zaned .btn-zan{
+	background: url(../images/zan/zan_start_voted.png) no-repeat;
+	background-size: 22px 19px;
+}
+
+
+.page-vote .vote-wrap .vote-content .team-endzan{
+	color: #9b9b9b;
+	background-color: #ededed;
+}
+
+.page-vote .vote-wrap .vote-content .team-endzan .team-info{
+	border-bottom: 1px solid #9b9b9b;
+}
+
+.page-vote .vote-wrap .vote-content .team-endzan .team-ps img{
+	border: 3px solid #d1d0d0;
+}
+
+.page-vote .vote-wrap .vote-content .team-endzan .btn-zan{
+	background: url(../images/zan/zan_end_unvoted.png) no-repeat;
+	background-size: 22px 19px;
+}
+
+.page-vote .vote-wrap .vote-content .team-endzan.team-zaned .btn-zan{
+	background: url(../images/zan/zan_end_voted.png) no-repeat;
+	background-size: 22px 19px;
+}
+
+

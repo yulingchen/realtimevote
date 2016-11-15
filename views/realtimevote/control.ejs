@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <title>实时投票管理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="http://res.wx.qq.com/open/libs/weui/1.0.2/weui.min.css">
+  <link rel="stylesheet" href="/realtimevote/css/realtimevote.css?v=2">
+</head>
+<body>
+  <div id="app">
+    <div class="weui-cells__title page-header clearfix">
+      <span class="pull-left">2016创新成果会投票管理</span>
+      <a href="javascript:;" id="init_system" class="weui-btn weui-btn_mini weui-btn_default pull-right">初始化</a>
+    </div>
+    <div class="weui-cells">
+      <div class="weui-cell" v-for="(team, index) in teams">
+        <div class="weui-cell__hd"><span class="no">{{index+1}}</span></div>
+        <div class="weui-cell__bd">
+          <p>{{team.name}}</p>
+        </div>
+        <div class="weui-cell__ft">
+          <a v-if="team.vote_starttime==0" href="javascript:;" :teamid="team._id" class="weui-btn weui-btn_mini weui-btn_default btn-openvote">开启投票</a>
+          <a v-if="team.vote_starttime>0" href="javascript:;" :teamid="team._id" class="weui-btn weui-btn_mini weui-btn_default btn-showvote">查看投票</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="weui-skin_android" id="androidActionsheet" style="display: none">
+    <div class="weui-mask"></div>
+    <div class="weui-actionsheet">
+      <div class="weui-actionsheet__menu">
+        <div class="weui-actionsheet__cell">初始化系统</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="js_dialog" id="iosDialog" style="display: none;">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+      <div class="weui-dialog__bd"></div>
+      <div class="weui-dialog__ft">
+        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary"></a>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="/js/dependencies/sails.io.js"></script>
+  <script type="text/javascript" src="/js/lib/zepto.min.js"></script>
+  <script type="text/javascript" src="/js/lib/vue.js"></script>
+  <script type="text/javascript" src="/realtimevote/js/control.js?v=50"></script>
+</body>
+</html>
